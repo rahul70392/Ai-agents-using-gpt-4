@@ -1,9 +1,48 @@
 [
   {
-    "route": "/time",
+    "route": "/forex_pair",
+    "is_route_dynamic": "false",
+    "method": "post",
+    "request_body": {
+      "id": "number",
+      "pair": "string",
+      "price": "number"
+    },
+    "response": "None"
+  },
+  {
+    "route": "/forex_pair/{id}",
+    "is_route_dynamic": "true",
+    "method": "get",
+    "request_body": "None",
+    "response": {
+      "id": "number",
+      "pair": "string",
+      "price": "number"
+    }
+  },
+  {
+    "route": "/forex_pairs",
     "is_route_dynamic": "false",
     "method": "get",
     "request_body": "None",
-    "response": "number"
+    "response": [
+      {
+        "id": "number",
+        "pair": "string",
+        "price": "number"
+      }
+    ]
+  },
+  {
+    "route": "/forex_pair",
+    "is_route_dynamic": "false",
+    "method": "put",
+    "request_body": {
+      "id": "number",
+      "pair": "string",
+      "price": "number"
+    },
+    "response": "None"
   }
 ]
