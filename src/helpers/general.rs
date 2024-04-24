@@ -7,14 +7,18 @@ use std::fs;
 
 const CODE_TEMPLATE_PATH: &str =
     "/Users/rahul703/Desktop/Projects/web_template/src/code_template.rs";
+
+pub const WEB_SERVER_PROJECT_PATH: &str = "/Users/rahul703/Desktop/Projects/web_template/";
+
 const EXEC_MAIN_PATH: &str = "/Users/rahul703/Desktop/Projects/web_template/src/main.rs";
-const API_SCHEMA_PATH: &str = "/Users/rahul703/Desktop/Projects/auto_gpt/schemas/api_schemas.json";
+
+const API_SCHEMA_PATH: &str = "/Users/rahul703/Desktop/Projects/auto_gpt/schemas/api_schema.json";
 
 //Encourage ai function to encourage specific output
 pub fn extend_ai_function(ai_func: fn(&str) -> &'static str, func_input: &str) -> Message {
     let ai_function_str = ai_func(func_input);
 
-    // dbg!(ai_function_str);
+    dbg!(ai_function_str);
 
     //Extent the string to encourage only printing the output
     let msg = format!(
